@@ -5,16 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Django Site{% endblock %}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flowbite@1.6.3/dist/flowbite.min.css">
+    <style>
+        .project h3 {
+            margin-bottom: 10px;
+            font-size: 15px; /* Increased font size */
+            font-weight: bold;
+            text-transform: uppercase; /* Optional: Makes text all uppercase */
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
 
     <!-- Navbar -->
-    <nav class="bg-blue-600 p-4 text-white">
-        <ul class="flex space-x-4">
-            <li><a href="{% url 'about' %}" class="hover:underline">About</a></li>
-            <li><a href="{% url 'projects' %}" class="hover:underline">Projects</a></li>
-        </ul>
-    </nav>
+<nav class="bg-purple-600 p-4 text-white">
+    <ul class="flex space-x-4">
+        <li><a href="{% url 'home' %}" class="hover:underline">Home</a></li>
+        <li><a href="{% url 'about' %}" class="hover:underline">About</a></li>
+        <li><a href="{% url 'projects' %}" class="hover:underline">Projects</a></li>
+    </ul>
+</nav>
+
 
     <!-- Main Content -->
     <div class="container mx-auto p-4">
@@ -22,9 +32,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white text-center p-4 mt-10">
-        <p>&copy; 2025 My Django Project</p>
-    </footer>
+  
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
 </body>

@@ -3,8 +3,84 @@
 {% block title %}About{% endblock %}
 
 {% block content %}
-    <div class="bg-white p-6 shadow-md rounded-lg">
-        <h1 class="text-2xl font-bold mb-4">About Page</h1>
-        <p class="text-gray-700">This is the about page content.</p>
+   
+<style>
+    .pt-serif-regular {
+        font-family: 'PT Serif', serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .pt-serif-bold-italic {
+        font-family: 'PT Serif', serif;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .about-container {
+        background-color: white; 
+        padding: 20px; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: left;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .about-content {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+
+    .about-image {
+        width: 100%; 
+        height: auto; 
+        max-width: 300px;
+        margin-bottom: 20px;
+        display: block; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+      
+        .about-image {
+            width: 80%; 
+        }
+    }
+</style>
+<main class="pt-serif-regular text-accent">
+    <div class="my-10"> 
+        <div class="about-container text-accent p-5 rounded-lg mx-auto">
+            <div class="flex flex-col md:flex-row justify-center items-center">
+                <div class="flex-1 text-center mb-4 md:mb-0">
+                    <h1 class="text-3xl pt-serif-bold-italic mb-4 text-secondary">About Me</h1>
+                </div>
+            </div>
+            
+           
+            <div class="flex flex-col items-center justify-center text-center">
+                <!-- svelte-ignore a11y-img-redundant-alt -->
+                {% load static %}
+              
+                    <img src="{% static 'images/about.jpg' %}" alt="Profile Image" 
+                         class="w-80 h-80 bg-gray-300 border-2 border-black" width="400" height="400">
+                <div class="about-text">
+                    <p class="pt-serif-regular text-lg">
+                        I’m Princess Diane Urbano, a 3rd-year BSIT student at Gordon College from Roosevelt, Dinalupihan, Bataan. My passion for technology and problem-solving drives me to continuously learn and grow in this field. However, my journey hasn't been without its challenges.
+                    </p>
+                    <p class="pt-serif-regular text-lg mt-4">
+                        There are many days when I find myself thinking, "Can I really do this?" Creativity sometimes eludes me, and I hesitate to try new things, fearing I’ll just mess them up. At times, I feel lost and unsure of whether what I'm doing is right. The fear of failure can be overwhelming, causing me to avoid challenges altogether. But these experiences have taught me resilience and the importance of perseverance.
+                    </p>
+                    <p class="pt-serif-regular text-lg mt-4">
+                        Despite these hurdles, I keep pushing forward. One of my most memorable experiences as a student developer began with my first proposed project: a simple to-do list for personal use. Working alongside my friend, I realized its potential to help others, which led us to transform it into a group manager application called "We Manage." Through continuous updates and collaboration, we simplified its features, making it more user-friendly and efficient. This project taught me the value of teamwork and the impact of technology in solving everyday problems.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
+</main>
+
 {% endblock %}
