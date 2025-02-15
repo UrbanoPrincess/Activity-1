@@ -17,7 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from my_activity1.portfolio import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
      path('portfolio/', include('portfolio.urls', namespace="portfolio")),
+     path('about/', views.about, name='about'),
+    path('project/', views.project, name='project'),
 ]
