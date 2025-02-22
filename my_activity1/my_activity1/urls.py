@@ -11,7 +11,6 @@ urlpatterns = [
 
     path('about/', views.about, name='about'),
     path('projects/', views.projects, name='projects'),  # Fix: Use views.projects (plural)
-    path('activity2/', views.activity2, name='activity2'),  # Fix: Use views.activity2 (if it exists)
     path('dashboard/', views.dashboard, name='dashboard'),
     path('reports/', views.reports, name='reports'),  # Add reports path
     path('setting/', views.setting, name='setting'),  # Add setting path

@@ -9,9 +9,6 @@ def about(request):
 def projects(request):  
     return render(request, 'pages/projects.html')
 
-def activity2(request):  
-    return render(request, 'pages/activity2.html')
-
 def reports(request):  
     return render(request, 'pages/reports.html')
 
