@@ -21,7 +21,8 @@ from my_activity1.portfolio import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('portfolio/', include('portfolio.urls', namespace="portfolio")),
-     path('about/', views.about, name='about'),
-    path('project/', views.project, name='project'),
+    path('portfolio/', include('portfolio.urls', namespace="portfolio")),
+    path('about/', views.about, name='about'),
+    path('projects/', views.project, name='projects'),
+    path('activity2/', views.activity2, name='activity2'),
 ]

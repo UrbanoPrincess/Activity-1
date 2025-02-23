@@ -1,12 +1,14 @@
 from django.urls import path
-
-from portfolio import views
+from portfolio import views  # Ensure correct import
 from .views import index
 
 app_name = "portfolio"  # Namespace for the app
 
-urlpatterns = [
-    path('', index, name='index'),  # Define the URL for the portfolio page
+urlpatterns = [  # ✅ Fix: Changed from 'uurlpatterns' to 'urlpatterns'
+    path('', index, name='index'),
     path('about/', views.about, name='about'),
-    path('projects/', views.project, name='projects'),
+    path('projects/', views.projects, name='projects'),
+    path('dashboard/', views.dashboard, name='dashboard'),  # Add dashboard path
+    path('reports/', views.reports, name='reports'),  # Add reports path
+    path('setting/', views.setting, name='setting'),  # Add setting path
 ]
