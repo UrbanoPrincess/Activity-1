@@ -8,6 +8,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('portfolio/', include('portfolio.urls', namespace="portfolio")),
     path('', lambda request: redirect('portfolio:index'), name='home'),  # Redirect to portfolio.index
-      path('about/', views.about, name='about'),
+    path('about/', views.about, name='about'),
     path('projects/', views.project, name='projects'),
 ]
